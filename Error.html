@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Access Denied - Hospital Claims Command Surface</title>
+  <style>
+    :root {
+      --border-bold: 3px solid #111;
+      --border-med: 2px solid #111;
+      --border-thin: 1px solid #cfcfcf;
+      --bg-accent: #f4f2ee;
+      --bg-panel: #fbfaf8;
+      --bg-alert: #fff0d8;
+      --bg-danger: #f8d9d6;
+      --text-main: #101010;
+      --text-muted: #626262;
+      --success: #234c2f;
+      --warning: #7a3f00;
+      --danger: #8b1e1e;
+      --font-main: "Segoe UI", Tahoma, Helvetica, sans-serif;
+      --font-mono: "Courier New", Courier, monospace;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--font-main); font-size: 14px; line-height: 1.45; color: var(--text-main); background: linear-gradient(180deg, #ffffff 0%, #f3f1ec 100%); }
+    code { font-family: var(--font-mono); background: #ece9e3; padding: 1px 4px; }
+    #masthead { border-bottom: var(--border-bold); padding: 16px 18px; display: grid; grid-template-columns: 1fr auto; gap: 20px; background: #fff; }
+    #masthead h1 { margin: 0; font-size: 18px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .subtitle { margin-top: 5px; color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .metadata { border-left: var(--border-med); padding-left: 16px; font-family: var(--font-mono); font-size: 11px; }
+    .metadata div span { display: inline-block; width: 88px; color: var(--text-muted); }
+    #container { display: grid; grid-template-columns: 230px 1fr; min-height: calc(100vh - 76px); }
+    aside { border-right: var(--border-med); padding: 14px 12px; background: rgba(255,255,255,0.92); }
+    aside h2 { margin: 0 0 10px; font-size: 11px; text-transform: uppercase; border-bottom: 1px solid #111; padding-bottom: 6px; }
+    .const-block { margin-top: 18px; padding: 8px; border: var(--border-thin); font-size: 10px; color: var(--text-muted); line-height: 1.8; font-family: var(--font-mono); background: #fff; }
+    main { padding: 20px; display: flex; flex-direction: column; align-items: flex-start; }
+    .priority-banner { background: var(--danger); color: #fff; padding: 9px 11px; font-size: 11px; margin-bottom: 20px; display: flex; justify-content: space-between; gap: 12px; text-transform: uppercase; letter-spacing: 0.06em; width: 100%; max-width: 480px; }
+    .priority-banner span:last-child { border: 1px solid #fff; padding: 0 6px; }
+    .form-card { border: var(--border-med); background: var(--bg-panel); padding: 20px; width: 100%; max-width: 480px; }
+    .form-card h3 { margin: 0 0 15px; text-transform: uppercase; font-size: 14px; letter-spacing: 0.05em; border-bottom: 1px solid #111; padding-bottom: 8px; color: var(--danger); }
+    button { width: 100%; margin-top: 20px; padding: 10px; border: 1px solid #111; border-radius: 0; font: inherit; background: #111; color: #fff; font-weight: 700; text-transform: uppercase; cursor: pointer; letter-spacing: 0.06em; text-align: center; text-decoration: none; display: block; }
+    button:hover { background: #333; }
+    .advisory { margin: 0 0 16px; padding: 10px; background: var(--bg-danger); border-left: 3px solid var(--danger); font-size: 12px; color: var(--danger); }
+    .error-details { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); margin-top: 14px; background: #fff; padding: 12px; border: var(--border-thin); }
+    .error-details div { margin-bottom: 4px; }
+    .error-details div:last-child { margin-bottom: 0; }
+    .error-details span { display: inline-block; width: 110px; color: var(--text-main); font-weight: bold; }
+    @media (max-width: 980px) {
+      #container { grid-template-columns: 1fr; }
+      aside { border-right: 0; border-bottom: var(--border-med); }
+    }
+    @media (max-width: 720px) {
+      #masthead { grid-template-columns: 1fr; }
+      main { padding: 14px; width: 100%; }
+      .priority-banner, .form-card { max-width: 100%; }
+      .priority-banner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header id="masthead">
+    <div>
+      <h1>Hospital Claims Command Surface</h1>
+      <div class="subtitle">Hospital claims operations console</div>
+    </div>
+    <div class="metadata">
+      <div><span>Reference:</span> <b>HC-ERR.403</b></div>
+      <div><span>Status:</span> <b>Rejected</b></div>
+    </div>
+  </header>
+  <div id="container">
+    <aside>
+      <h2>Authorization Failure</h2>
+      <div class="const-block">
+        Access clearing token missing.<br>
+        Privilege escalation blocked.<br>
+        Security operations notified.
+      </div>
+    </aside>
+    <main>
+      <div class="priority-banner">
+        <span>Security Alert</span>
+        <span>Invalid Permissions</span>
+      </div>
+      <section class="form-card">
+        <h3>HTTP 403: Forbidden</h3>
+        <div class="advisory">
+          <strong>Access Denied:</strong> Your operator profile does not possess the required clearance flags to view this terminal node. 
+        </div>
+        
+        <p style="margin: 0; font-size: 13px; color: var(--text-main);">
+          If you believe this is an administrative oversight, verify your credential scope or clear your temporary session variables.
+        </p>
+
+        <div class="error-details">
+          <div><span>Incident ID:</span> ERR-9941-A</div>
+          <div><span>Clearance Req:</span> LEVEL_03_SEC</div>
+          <div><span>Terminal Sign:</span> SIG_FAIL_0x44</div>
+        </div>
+
+        <button onclick="window.location.href='Login.html';">Return to Gateway</button>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

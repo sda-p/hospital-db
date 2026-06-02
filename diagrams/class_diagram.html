@@ -1,0 +1,160 @@
+Hospital Claims System ArchitectureThis diagram follows UML conventions to represent the relationships between the transactional services, the search subsystem, and the domain entities.classDiagram
+    %% --- HTTP & Search Layer ---
+    class HospitalClaimsHttpServer {
+        -HospitalClaimsService claimsService
+        -ViewSearchService searchService
+        -SavedViewSearchStore searchStore
+        +handleRequest()
+    }
+
+    class ViewSearchService {
+        +search(ViewQuery query) ViewSearchResult
+        +transform(HospitalClaimsService source)
+    }
+
+    class SavedViewSearchStore {
+        +savePreset(ViewQuery query)
+        +getPresets()
+    }
+
+    %% Search DTOs
+    class ViewDataset { <<Data>> }
+    class ViewQuery { <<Data>> }
+    class ViewRecord { <<Data>> }
+    class ViewSearchResult { <<Data>> }
+    class ViewGroup { <<Data>> }
+    class ViewComposedSearchResult { <<Data>> }
+
+    %% --- Service Layer ---
+    class HospitalClaimsService {
+        -ClaimRepository claimRepo
+        -InsuranceRepository insuranceRepo
+        -PatientRepository patientRepo
+        -DoctorRepository doctorRepo
+        -DrugRepository drugRepo
+        -PrescriptionRepository prescriptionRepo
+        -VisitRepository visitRepo
+        +validateClaim(Claim claim)
+        +createClaimFromPrescription(id pId)
+        +getPatientHistory(id pId) PatientHistoryReport
+    }
+
+    %% --- Read Models (DTOs) ---
+    class PrescriptionReview {
+        -Prescription prescription
+        -Drug resolvedDrug
+        -Doctor resolvedDoctor
+        +Date computedEndDate
+        +Boolean isActive
+        +Boolean isEligible
+        +List~String~ eligibilityIssues
+    }
+
+    class ClaimView {
+        -Claim claim
+        -PrescriptionReview review
+    }
+
+    class PatientHistoryReport {
+        -Patient patient
+        -Insurance insurance
+        -Doctor primaryDoctor
+        -List~Visit~ visits
+        -List~PrescriptionReview~ reviews
+    }
+
+    %% --- Repositories ---
+    class ClaimRepository { <<Interface>> }
+    class InsuranceRepository { <<Interface>> }
+    class PatientRepository { <<Interface>> }
+    class DoctorRepository { <<Interface>> }
+    class DrugRepository { <<Interface>> }
+    class PrescriptionRepository { <<Interface>> }
+    class VisitRepository { <<Interface>> }
+
+    %% --- Domain Entities ---
+    class Patient {
+        +UUID id
+        +UUID insuranceId
+        +UUID primaryCareDoctorId
+    }
+
+    class Doctor {
+        +UUID id
+        +String name
+    }
+
+    class Insurance {
+        +UUID id
+        +String providerName
+    }
+
+    class Drug {
+        +UUID id
+        +String scientificName
+    }
+
+    class Prescription {
+        +UUID id
+        +UUID patientId
+        +UUID doctorId
+        +UUID drugId
+    }
+
+    class Visit {
+        +UUID patientId
+        +UUID doctorId
+        +Date visitDate
+    }
+
+    class Claim {
+        +UUID id
+        +UUID prescriptionId
+        +UUID patientId
+        +UUID insuranceId
+    }
+
+    %% --- Relationships ---
+
+    %% Server Dependencies
+    HospitalClaimsHttpServer ..> HospitalClaimsService : orchestrates
+    HospitalClaimsHttpServer ..> ViewSearchService : queries
+    HospitalClaimsHttpServer ..> SavedViewSearchStore : persists presets
+
+    %% Search Data Flow
+    ViewSearchService ..> ViewQuery : consumes
+    ViewSearchService ..> ViewSearchResult : produces
+    ViewSearchResult *-- ViewRecord
+    ViewSearchResult *-- ViewGroup
+    ViewComposedSearchResult *-- ViewSearchResult
+
+    %% Service Dependencies (Repositories)
+    HospitalClaimsService ..> ClaimRepository
+    HospitalClaimsService ..> InsuranceRepository
+    HospitalClaimsService ..> PatientRepository
+    HospitalClaimsService ..> DoctorRepository
+    HospitalClaimsService ..> DrugRepository
+    HospitalClaimsService ..> PrescriptionRepository
+    HospitalClaimsService ..> VisitRepository
+
+    %% Entity Associations
+    Patient "0..1" --> "1" Insurance : has insuranceId
+    Patient "0..1" --> "1" Doctor : primaryCareDoctorId
+    Prescription "1" --> "1" Patient
+    Prescription "1" --> "1" Doctor
+    Prescription "1" --> "1" Drug
+    Visit "1" --> "1" Patient : composite key
+    Visit "1" --> "1" Doctor : composite key
+    Claim "1" --> "1" Prescription : source
+
+    %% Read Model Compositions
+    PrescriptionReview o-- Prescription : wraps
+    PrescriptionReview o-- Drug
+    PrescriptionReview o-- Doctor
+    ClaimView o-- Claim
+    ClaimView o-- PrescriptionReview
+    PatientHistoryReport o-- Patient
+    PatientHistoryReport o-- Insurance
+    PatientHistoryReport o-- Doctor
+    PatientHistoryReport o-- Visit : list
+    PatientHistoryReport o-- PrescriptionReview : list

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Hospital Claims Command Surface</title>
+  <style>
+    :root {
+      --border-bold: 3px solid #111;
+      --border-med: 2px solid #111;
+      --border-thin: 1px solid #cfcfcf;
+      --bg-accent: #f4f2ee;
+      --bg-panel: #fbfaf8;
+      --bg-alert: #fff0d8;
+      --bg-danger: #f8d9d6;
+      --text-main: #101010;
+      --text-muted: #626262;
+      --success: #234c2f;
+      --warning: #7a3f00;
+      --danger: #8b1e1e;
+      --font-main: "Segoe UI", Tahoma, Helvetica, sans-serif;
+      --font-mono: "Courier New", Courier, monospace;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--font-main); font-size: 14px; line-height: 1.45; color: var(--text-main); background: linear-gradient(180deg, #ffffff 0%, #f3f1ec 100%); }
+    code { font-family: var(--font-mono); background: #ece9e3; padding: 1px 4px; }
+    #masthead { border-bottom: var(--border-bold); padding: 16px 18px; display: grid; grid-template-columns: 1fr auto; gap: 20px; background: #fff; }
+    #masthead h1 { margin: 0; font-size: 18px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .subtitle { margin-top: 5px; color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .metadata { border-left: var(--border-med); padding-left: 16px; font-family: var(--font-mono); font-size: 11px; }
+    .metadata div span { display: inline-block; width: 88px; color: var(--text-muted); }
+    #container { display: grid; grid-template-columns: 230px 1fr; min-height: calc(100vh - 76px); }
+    aside { border-right: var(--border-med); padding: 14px 12px; background: rgba(255,255,255,0.92); }
+    aside h2 { margin: 0 0 10px; font-size: 11px; text-transform: uppercase; border-bottom: 1px solid #111; padding-bottom: 6px; }
+    .const-block { margin-top: 18px; padding: 8px; border: var(--border-thin); font-size: 10px; color: var(--text-muted); line-height: 1.8; font-family: var(--font-mono); background: #fff; }
+    main { padding: 20px; display: flex; flex-direction: column; align-items: flex-start; }
+    .priority-banner { background: #111; color: #fff; padding: 9px 11px; font-size: 11px; margin-bottom: 20px; display: flex; justify-content: space-between; gap: 12px; text-transform: uppercase; letter-spacing: 0.06em; width: 100%; max-width: 480px; }
+    .priority-banner span:last-child { border: 1px solid #fff; padding: 0 6px; }
+    .form-card { border: var(--border-med); background: var(--bg-panel); padding: 20px; width: 100%; max-width: 480px; }
+    .form-card h3 { margin: 0 0 15px; text-transform: uppercase; font-size: 14px; letter-spacing: 0.05em; border-bottom: 1px solid #111; padding-bottom: 8px; }
+    label { display: block; margin-top: 14px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+    input, button { width: 100%; margin-top: 4px; padding: 10px; border: 1px solid #111; border-radius: 0; font: inherit; background: #fff; color: var(--text-main); }
+    button { background: #111; color: #fff; font-weight: 700; text-transform: uppercase; cursor: pointer; margin-top: 20px; letter-spacing: 0.06em; }
+    button:hover { background: #333; }
+    .advisory { margin: 0 0 16px; padding: 10px; background: var(--bg-alert); border-left: 3px solid #111; font-size: 12px; }
+    .checkbox-field { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 12px; text-transform: none; letter-spacing: 0; color: var(--text-main); }
+    .checkbox-field input { width: auto; margin: 0; }
+    @media (max-width: 980px) {
+      #container { grid-template-columns: 1fr; }
+      aside { border-right: 0; border-bottom: var(--border-med); }
+    }
+    @media (max-width: 720px) {
+      #masthead { grid-template-columns: 1fr; }
+      main { padding: 14px; width: 100%; }
+      .priority-banner, .form-card { max-width: 100%; }
+      .priority-banner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header id="masthead">
+    <div>
+      <h1>Hospital Claims Command Surface</h1>
+      <div class="subtitle">Hospital claims operations console</div>
+    </div>
+    <div class="metadata">
+      <div><span>Reference:</span> <b>HC-AUTH.2026</b></div>
+      <div><span>Status:</span> <b>Gatekeeper</b></div>
+    </div>
+  </header>
+  <div id="container">
+    <aside>
+      <h2>Authentication</h2>
+      <div class="const-block">
+        Secure token handshake required.<br>
+        Sessions expire after 15m idle.<br>
+        IP logging strictly enforced.
+      </div>
+    </aside>
+    <main>
+      <div class="priority-banner">
+        <span>Security Layer</span>
+        <span>Access Control Active</span>
+      </div>
+      <section class="form-card">
+        <h3>Operator Sign-In</h3>
+        <div class="advisory">
+          <strong>Notice:</strong> Authorized personnel only. All access, queries, and modifications are cryptographically signed and archived.
+        </div>
+        <form action="/actions/login" method="POST">
+          <label for="operator-id">Operator ID / Email</label>
+          <input type="text" id="operator-id" name="operator-id" placeholder="e.g., op-4491@system" required autocomplete="username">
+          
+          <label for="passphrase">Passphrase</label>
+          <input type="password" id="passphrase" name="passphrase" required autocomplete="current-password">
+          
+          <div class="checkbox-field">
+            <input type="checkbox" id="persist-session" name="persist-session">
+            <label for="persist-session" style="display:inline; margin:0; text-transform:none; color:inherit; font-size:12px; letter-spacing:0;">
+              Request extended session parameters (8 hours)
+            </label>
+          </div>
+          <button type="submit">Authenticate Terminal</button>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

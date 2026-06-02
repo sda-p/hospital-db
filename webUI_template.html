@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  /* CORE THEME: Industrial / Brutalist / Technical */
+  :root {
+    --border-bold: 3px solid #000;
+    --border-med: 2px solid #000;
+    --border-thin: 1px solid #ccc;
+    --bg-accent: #f8f8f8;
+    --text-muted: #666;
+    --font-main: 'Segoe UI', Tahoma, Helvetica, sans-serif;
+    --font-mono: 'Courier New', Courier, monospace;
+  }
+
+  body { font-family: var(--font-main); margin: 0; line-height: 1.4; font-size: 13px; color: #000; background: #fff; }
+
+  /* MASTHEAD: Branding and Metadata */
+  #masthead { border-bottom: var(--border-bold); padding: 15px; display: grid; grid-template-columns: 1fr auto; gap: 20px; }
+  #masthead h1 { font-size: 18px; text-transform: uppercase; margin: 0; }
+  .subtitle { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+  .metadata { border-left: var(--border-med); padding-left: 15px; font-family: var(--font-mono); font-size: 11px; }
+  .metadata div span { color: var(--text-muted); display: inline-block; width: 100px; }
+
+  /* LAYOUT: Sidebar + Main */
+  #container { display: grid; grid-template-columns: 210px 1fr; min-height: 100vh; }
+
+  /* SIDEBAR: Navigation and Constants */
+  aside { border-right: var(--border-med); padding: 10px; background: #fff; }
+  aside h2 { font-size: 11px; text-transform: uppercase; border-bottom: 1px solid #000; margin-bottom: 8px; }
+  .index-link { display: block; font-size: 11px; color: blue; text-decoration: underline; margin-bottom: 4px; cursor: pointer; }
+  .index-link.hot { font-weight: bold; border-left: 3px solid #000; padding-left: 5px; text-decoration: none; color: #000; }
+  .const-block { font-size: 10px; border: 1px solid #ccc; padding: 5px; color: var(--text-muted); margin-top: 15px; line-height: 1.8; }
+
+  /* MAIN CONTENT AREA */
+  main { padding: 20px; }
+  
+  /* DATA COMPONENTS */
+  .priority-banner { background: #000; color: #fff; padding: 8px; font-size: 11px; margin-bottom: 20px; display: flex; justify-content: space-between; }
+
+  .branch-section { border: var(--border-med); margin-bottom: 25px; }
+  .branch-header { background: #000; color: #fff; padding: 8px; font-weight: bold; text-transform: uppercase; cursor: pointer; }
+  
+  .node { border: 1px solid #000; margin: 10px; }
+  .node-header { display: flex; justify-content: space-between; padding: 6px; border-bottom: 1px solid #000; background: var(--bg-accent); }
+  .node-title { font-weight: bold; text-transform: uppercase; }
+  .node-body { padding: 10px; }
+
+  /* UTILITY BADGES */
+  .badge-now { background: #000; color: #fff; padding: 1px 4px; font-size: 9px; margin-left: 5px; vertical-align: middle; }
+  .badge-whv { background: #555; color: #fff; padding: 1px 4px; font-size: 9px; margin-right: 5px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    #container { grid-template-columns: 1fr; }
+    aside { display: none; } /* Simplified for mobile example */
+  }
+</style>
+</head>
+<body>
+
+<header id="masthead">
+  <div>
+    <h1>Dossier Ω-7 // Title Here</h1>
+    <div class="subtitle">Logistical Node Analysis · Western Sector · Ver. 2.0</div>
+  </div>
+  <div class="metadata">
+    <div><span>Reference:</span> <b>E-2.718</b></div>
+    <div><span>Status:</span> <b>Active / High</b></div>
+  </div>
+</header>
+
+<div id="container">
+  <aside>
+    <h2>Index</h2>
+    <a class="index-link hot">Ω1 · Comms Rigger</a>
+    <a class="index-link">Ω2 · Stevedore</a>
+    <a class="index-link">Ω3 · Automation</a>
+    <div class="const-block">
+      FIB: 1, 1, 2, 3, 5, 8...<br>
+      φ = 1.61803...
+    </div>
+  </aside>
+
+  <main>
+    <div class="priority-banner">
+      <span>★ PRIORITY: Industrial Entry Points Identified</span>
+      <span style="border: 1px solid #fff; padding: 0 4px;">C + CS Advantage</span>
+    </div>
+
+    <details class="branch-section" open>
+      <summary class="branch-header">Ω1 · Technical Branch</summary>
+      
+      <div class="node">
+        <div class="node-header">
+          <div class="node-title"><span class="badge-whv">◆ WHV</span>Entry Node 1.1<span class="badge-now">◄ NOW</span></div>
+          <b>$45–60/hr</b>
+        </div>
+        <div class="node-body">
+          <p>Field data entry goes here. Describe the role, the physical requirements, and the technical crossover.</p>
+          <div style="font-size: 11px; border-left: 3px solid #000; padding-left: 10px; margin-top: 10px;">
+            <b>Convergence:</b> Links to Automation Branch Ω3.
+          </div>
+        </div>
+      </div>
+    </details>
+
+  </main>
+</div>
+
+</body>
+</html>

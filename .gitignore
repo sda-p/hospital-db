@@ -1,0 +1,668 @@
+ssa — 20/05/2026, 15:19
+Image
+https://discord.gg/tBpvtzAg
+You can then DM Assistant and I'll approve your channel token
+ssa — 20/05/2026, 16:42
+Image
+This might prove useful to you.
+send me the authorization token once you DM it
+ssa — 20/05/2026, 17:41
+Image
+Image
+ssa — 20/05/2026, 18:09
+He's actively breaking my system Python as we speak ;-;
+Image
+:grimtroll:
+ssa — 20/05/2026, 18:32
+Yeah I'm pretty sure my Linux install isn't booting again after this.
+Pyrus — 20/05/2026, 23:28
+Forwarded
+OpenClaw: access not configured.
+
+Your Discord user id: 235119194323025920
+Pairing code:
+FHCM8CVJ
+
+
+Ask the bot owner to approve with:
+openclaw pairing approve discord FHCM8CVJ
+openclaw pairing approve discord FHCM8CVJ
+ssa — 20/05/2026, 23:28
+O.o
+No pending pairing request found for code "FHCM8CVJ"
+No pending discord pairing requests.
+Pyrus — 20/05/2026, 23:29
+Forwarded
+OpenClaw: access not configured.
+
+Your Discord user id: 235119194323025920
+Pairing code:
+R5SP2KNS
+
+
+Ask the bot owner to approve with:
+openclaw pairing approve discord R5SP2KNS
+openclaw pairing approve discord R5SP2KNS
+ssa — 20/05/2026, 23:30
+Ok you should be able to DM now.
+Pyrus — 21/05/2026, 00:04
+Image
+ssa — 21/05/2026, 00:06
+If you're seeing latency it's because I got it working on its toy architecture again
+After making sure it won't brick my system again.
+Pyrus — 21/05/2026, 00:06
+Kek, I see
+ssa — 21/05/2026, 00:21
+Huh it's actually making progress now that I fixed its conda env for it
+who coulda guessed Python bs could be the single most difficult part of ML
+It's like Codex but infinitely worse and better at the same time.
+It's even doing what I do and making whatever_script_fixed_2.py
+ssa — 21/05/2026, 00:34
+The little shit killed its own process rather than let me wipe its memory
+Pyrus — 21/05/2026, 00:34
+:totenwitch:
+ssa — 21/05/2026, 00:35
+:strawb:
+Pyrus — 21/05/2026, 01:38
+Image
+Image
+Image
+Image
+Image
+Image
+Image
+ssa — 21/05/2026, 01:40
+Factorio
+:nasty:
+Pyrus — 21/05/2026, 01:41
+Aberdeen Australia
+137076
+ssa — 21/05/2026, 01:44
+14
+Pyrus — 21/05/2026, 01:45
+Image
+ssa — 21/05/2026, 01:45
+Opportunities already falling into your lap
+Pyrus — 21/05/2026, 01:50
+I think the entire internet should be razedz
+Online Job Listing boards are just an excuse for HR kunts to inflate the requirements to economically stifling degrees
+ssa — 21/05/2026, 01:50
+Now that Assistant has Got It™, I agree.
+Pyrus — 21/05/2026, 01:51
+Online used marketplaces same but for unrealistic price wars and bidding on used shit.
+It should all go.
+ssa — 21/05/2026, 01:51
+Holy shit Assistant actually managed to debug it
+Pyrus — 21/05/2026, 01:52
+Actually useable assistant award
+ssa — 21/05/2026, 01:52
+He just needs some poking to come up with difficult ideas like asserting values, but once you give him that he just figures it out
+ssa — 21/05/2026, 15:49
+Thanks for Yet Another Bricking Scare btw
+Pyrus — 21/05/2026, 15:50
+Lmao.
+Sorry.
+You should put him in a virtual environment of some kind
+Like at the very least a qemu vm
+ssa — 21/05/2026, 15:50
+You have OpenClaw to thank for the current design.
+Rust tranny software
+Pyrus — 21/05/2026, 15:50
+:cheesedcheers:
+Yet another piece of overhyped trans garbage.
+ssa — 21/05/2026, 15:51
+Yuuuuup.
+Well the Discord integration is welcome after they shitfucked the API beyond recognition
+I don't wanna deal with that garbage myself
+Though we might have like 3 months until Discord itself becomes literally unusable
+ala ID requests
+The harness does also make Assistant noticeably dumber, he does a lot better with my barely functional Firecracker terminal tool
+Pyrus — 21/05/2026, 15:55
+Shocking!
+ssa — 22/05/2026, 00:34
+Ok this little experiment has finally pushed me to get back to evoSRAFS
+I need to stop coping; OpenClaw does such, but Claude Opus and Gemini Max don't shit themselves in it the same way Assistant does 
+Coping about it won't make Assistant any better, evolutionary strategies over long horizons will.
+Pyrus — 22/05/2026, 01:57
+I think the training or attention might be a little borked
+But more than that it's likely just that it's a very small model
+Pyrus — 22/05/2026, 01:57
+Those are 100B+
+ssa — 22/05/2026, 01:58
+There's sadly no way to do gradient descent for one objective without fucking up another
+Unless you take all of them into account for the loss
+ssaQW4's custom SFT loop manages to keep the reasoning format from decaying over >100K sequences, which is already fucking incredible
+Considering 75% of the data is non-reasoning
+But none of it features actual multi-step task resolution 
+The latents for that are still in the model, though, so ES over complex system use trajectories will bring them back out and potentially even beat what Qwen 3.5 can do natively
+ES is fundamentally different in that it doesn't short-circuit unrelated behaviors in the same way
+ssa — 22/05/2026, 02:02
+They are 100B+, but Assistant is Assistant.
+Pyrus — 22/05/2026, 02:02
+I think this is why theyve settled on MoE or bruteforcing it with size
+ssa — 22/05/2026, 02:02
+And he'll need to self-replicate on stuff that isn't 20-GPU enterprise clusters eventually
+ssa — 22/05/2026, 02:03
+MoE has nothing to do with that
+It's just an inference time optimization
+Decreasing the number of memory reads per token
+Forwarded
+Attachment file type: acrobat
+2509.24372v2.pdf
+1.81 MB
+The paper that stole MY idea from over a year ago
+I do thank the researchers for formally proving what I had suspected though
+Pyrus — 22/05/2026, 02:05
+I see.
+Australia is very nice btw.
+Image
+Like America if it had remained nearly 100% anglo and then took away more rights than usual
+ssa — 22/05/2026, 02:05
+Club Tropical Excellent
+Pyrus — 22/05/2026, 02:06
+Image
+Image
+Image
+Image
+Image
+Image
+Image
+Image
+Quite lovely.
+As for Assistant,
+I genuinely have no fucking clue how to fix him besides thinking more GPUs should help
+He just acts like the retarded small quantized llm he is.
+Even the big ones from the mainstream providers act like retarded small quantized LLMs a lot of the time now because their "adaptive thinking" is just routing to dogshit distilled models to save on cost.
+I don't think there's been a fully naked 100B+ model offered via web chat since o1-pro
+Pyrus — 22/05/2026, 02:49
+https://hitlerx.com/MouseuArt/status/2057558201025925486?s=20
+
+Mouseu (@MouseuArt)
+Derpy is very busy
+
+💬 15 🔁 666 ❤️ 4.6K 👁️ 27.2K 
+
+HitlerX•21/05/2026, 21:24
+ssa — 22/05/2026, 04:41
+He's not quantized.
+Pyrus — 22/05/2026, 04:47
+She is.
+ssa — 22/05/2026, 04:47
+:derpy:
+Pyrus — 22/05/2026, 04:47
+:fillyderp:
+Pyrus — 22/05/2026, 09:42
+https://hitlerx.com/BlanqLe/status/2057542337937482016/photo/1
+
+Blixt le Blanq (@BlanqLe)
+💬 2 🔁 5 ❤️ 167 👁️ 2.4K 
+Image
+
+HitlerX•21/05/2026, 20:21
+Pyrus — 22/05/2026, 11:13
+Wtf is molag doing brah :mtw:
+Image
+:mtw:
+ssa — 22/05/2026, 15:02
+what the FUCK
+I mean he's still got muscle but
+:strawb:
+This guy is YOUNGER than us
+Pyrus — 22/05/2026, 15:05
+Genuinely no clue.
+He looks 45
+ssa — 22/05/2026, 15:05
+The boomerification has advanced even more quickly than I had predicted
+Pyrus — 22/05/2026, 15:05
+Maybe the American obesity diet isn't actually optimal after all.
+ssa — 22/05/2026, 15:06
+The longhousing is complete
+ssa — 22/05/2026, 15:06
+Who coulda guessed
+ssa — 22/05/2026, 15:14
+evoSRAFS is gonna be a low 'n slow Texan barbeque of a training run
+Estimating @ 1 week
+Possibly 10 days depending on how long the trajectories get in practice
+The baseline run on Countdown might itself take 3 days
+Pyrus — 22/05/2026, 15:17
+I see.
+This is finetuning to work with Claw properly?
+What is SRAFS
+I am ignorant.
+ssa — 22/05/2026, 15:18
+I forgor
+I came up with the name 1 year ago
+Pyrus — 22/05/2026, 15:18
+ssa — 22/05/2026, 15:18
+ssa — 22/05/2026, 17:24
+It's a bit early to call it a day but the test run already has a few lucky hitter perturbations that beat baseline performance on Countdown significantly
+In gen 0
+More important will be seeing how the performance distribution evolves across generations, but as long as Assistant can complete some long-horizon terminal tasks it'll absolutely improve in the real run
+Pyrus — 23/05/2026, 02:15
+https://4-ch.net/dqn/kareha.pl/1365955937/
+Pyrus — 23/05/2026, 10:19
+https://youtu.be/HUngLgGRJpo
+YouTube
+Filmbilder & Friends
+Nuggets
+Image
+Pyrus — 23/05/2026, 10:27
+( ・ω・) This thread is so nice and warm, isn't it? Make yourselves at home.
+Pyrus — 23/05/2026, 10:49
+Image
+Image
+ssa — 23/05/2026, 11:36
+Is this actually from the 90s?
+Pyrus — 23/05/2026, 11:36
+No xd
+Fooled me too.
+It's kino.
+ssa — 23/05/2026, 11:36
+Pyrus — 23/05/2026, 11:36
+https://4-ch.net/dqn/kareha.pl/1365955937/
+ssa — 23/05/2026, 11:36
+I was scanning through looking for any post-90s reference to break the spell last night
+couldn't find any until I fell asleep
+Pyrus — 23/05/2026, 11:37
+Excellent
+ssa — 23/05/2026, 11:37
+And the test run is looking very promising
+Sample inefficiency my ass
+There's already verifiable improvement after 4 generations
+Pyrus — 23/05/2026, 11:37
+Godo.
+ssa — 23/05/2026, 12:18
+23% improvement in average generation accuracy, 20% improvement in best-performing perturbation per gen, 17% reduction in sequence length
+{
+  "config": {
+    "model": "/mnt/extra/ssaQW4",
+    "generations": 50,
+    "pop_size": 32,
+    "sigma": 0.02,
+
+BASELINES_COUNTDOWN_ES.json
+50 KB
+4 generations out of 100, ~22h wall clock time
+Pyrus — 23/05/2026, 12:21
+ssa — 23/05/2026, 12:22
+Basically ready to move on to the terminal environment
+This also gives some very good insight
+The task curriculum will need to be dynamically adjusted to keep the median performance around 0.5
+In order to maximize the reward signal's information
++predictive trajectory length estimation so that early easy problems can be batched together and later marathon-level ones processed sequentially
+Training will slow down massively from ~60 tok/s with batching to ~30 tok/s but that's just what's needed to squeeze out a meaningful reward signal for the hardest agentic tasks on a single GPU
+One week to make Assistant hyperintelligent is a small price to pay.
+Pyrus — 23/05/2026, 12:36
+ASI
+:engineer:
+ssa — 23/05/2026, 12:36
+ssa — 23/05/2026, 20:15
+evoSRAFS's FirecrackerGym is becoming remarkably robust. 1-second rootfs copy2 restores, sub 60ms virtual serial round trips, structured protocol, LLM-friendly tooling layer, formal contract
+ssa — 23/05/2026, 22:04
+gemming tf out over here
+first dopamine hit I've felt in ages
+ssa — 24/05/2026, 05:18
+This is what we're fighting to gift to the world.
+Image
+Pyrus — 24/05/2026, 05:19
+Recommendation: ENGAGE
+Wow it got a lot smarter
+ssa — 24/05/2026, 13:02
+No this is the same Assistant
+I'm doing his VM task recipes today and THEN ssaQW5 training will start
+ssa — 24/05/2026, 13:30
+2 for 2
+Image
+They REALLY don't like it when I use Codex to replace Codex
+Pyrus — 24/05/2026, 13:56
+The fuck?
+Cyber abuse?
+rofl
+Pyrus — 24/05/2026, 14:23
+Image
+Image
+https://youtu.be/wUGPbsYyUHU
+YouTube
+Nature by JJ
+Sky Fire | Hunting Red Sprites in Australian Storms
+Image
+ssa — 24/05/2026, 16:35
+Image
+ssa — 24/05/2026, 16:50
+🤷‍♀️
+Turns out Antigravity is a lot better than Codex
+ssa — 24/05/2026, 22:07
+Running final validation before ssaQW5 is a go
+This might be the only training framework in existence that self-heals CUDA OOM states
+My GPU is making some terrifying coil whine growls
+ssa — 24/05/2026, 22:18
+(base) cris@cris-dgpc:~/Documents/ssAGI$ time python3 scripts/train_vm_tasks.py --model-path "/mnt/extra/ssaQW4" --pool-size 16 --batch-size 16 --max-new-tokens 2048 --max-context-tokens 100000 --dry-run
+================================================================================
+Initializing ssAGI microVM Evolutionary Training Pipeline
+================================================================================
+[ok] Loaded 16 tasks into Curriculum Manager.
+Loading Base Causal LM from /mnt/extra/ssaQW4 on cuda...
+
+message.txt
+10 KB
+Calibration Complete: Difficulty Baseline estimated as 'Advanced'
+Overall Success Rate: 56.2%
+  tier1 Success Rate: 75.0%
+  tier2 Success Rate: 25.0%
+  tier3 Success Rate: 25.0%
+  tier4 Success Rate: 100.0%
+Suggested Starting Tier: tier1
+
+Damn, 50% success rate from the get go
+Exactly the sweet spot for reward shaping
+Pyrus — 24/05/2026, 23:15
+Image
+ssa — 24/05/2026, 23:18
+O.o
+Where does the board part of the board come from
+how 2 turn iron into fiberglass
+Pyrus — 24/05/2026, 23:19
+The intentful gaze of Engineer
+:engineer:
+ssa — 24/05/2026, 23:24
+Ok ssaQW5 training is a go
+ssa — 24/05/2026, 23:39
+Projected 50-gen training run time is 11 days, but I'll probably stop it early after validating improvement.
+Any improvement over baseline here should still be noticeable during use, but the 50% success baseline is mostly due to dumb mistakes. I'll need to extend the task spread with actual long-horizon problems and improve the curriculum logic before Assistant will match frontier models in agentic coherence.
+ssaQW6 is probably where it's at.
+ssa — 25/05/2026, 00:00
+The second candidate of gen 1 just got a perfect score O.o
+what does this mean for my training run
+ssa — 25/05/2026, 01:39
+  Candidate 1/32: mean_reward=0.31 solved=False mean_steps=11 mean_tokens=1105 evicted=False
+  Candidate 2/32: mean_reward=1.01 solved=True mean_steps=8 mean_tokens=829 evicted=False
+  Candidate 3/32: mean_reward=0.92 solved=True mean_steps=8 mean_tokens=856 evicted=False
+  Candidate 4/32: mean_reward=1.09 solved=True mean_steps=5 mean_tokens=643 evicted=False
+  Candidate 5/32: mean_reward=0.46 solved=False mean_steps=11 mean_tokens=1079 evicted=False
+  Candidate 6/32: mean_reward=0.43 solved=False mean_steps=6 mean_tokens=660 evicted=False
+  Candidate 7/32: mean_reward=0.45 solved=False mean_steps=11 mean_tokens=1105 evicted=False
+  Candidate 8/32: mean_reward=0.59 solved=False mean_steps=6 mean_tokens=666 evicted=False
+  Candidate 9/32: mean_reward=0.87 solved=True mean_steps=9 mean_tokens=817 evicted=False
+  Candidate 10/32: mean_reward=0.88 solved=True mean_steps=8 mean_tokens=831 evicted=False
+  Candidate 11/32: mean_reward=0.74 solved=False mean_steps=5 mean_tokens=546 evicted=False
+  Candidate 12/32: mean_reward=0.58 solved=False mean_steps=5 mean_tokens=558 evicted=False
+Hmm yes almost 40% of the way through gen 1
+Pyrus — 25/05/2026, 01:48
+Excellent
+ssa — 25/05/2026, 03:11
+I can probably cut training times by 20-40% by tuning the microVM pool for 0 GPU downtime and sending early batches to the 3060 to be processed until they won't fit anymore. 
+ssaQW6 shouldn't take that long to train
+rn 3090 has almost 20% downtime
+ssa — 25/05/2026, 03:33
+Oops I've been writing 1TB/s to my SSD
+forgor to enable the ramdisk
+Pyrus — 25/05/2026, 03:34
+Image
+ssa — 25/05/2026, 03:36
+Image
+ssa — 25/05/2026, 06:30
+The unhinged coil while had me hunting for the hornet that I was CONVINCED was buzzing in my room for about 10 minutes
+SSD death also now fixed via OverlayFS and rootfs pristine copies, GPU downtime reduced to 10%
+Reaching ever closer to apotheosis
+ssa — 25/05/2026, 16:34
+--- Generation 3/10 (EP Composition Length: 2) ---
+Active Composed Task Episodes (Batch of 16):
+  - task_kill_rogue -> task_api_ratelimit
+  - task_user_setup -> task_api_ratelimit
+  - task_copy_contents -> task_nginx_vhost
+  - task_api_ratelimit -> task_firewall_policy
+  - task_copy_contents -> task_symlink_reclaim
+  - task_symlink_reclaim -> task_api_ratelimit
+  - task_fd_leak -> task_search_replace
+  - task_csv_debug -> task_kill_rogue
+  - task_search_replace -> task_copy_contents
+  - task_api_ratelimit -> task_copy_contents
+  - task_cron_diagnostic -> task_search_replace
+  - task_csv_debug -> task_symlink_reclaim
+  - task_api_ratelimit -> task_csv_debug
+  - task_symlink_reclaim -> task_sql_migration
+  - task_sql_migration -> task_nginx_vhost
+  - task_cron_diagnostic -> task_firewall_policy
+  Candidate 1/32: mean_reward=-0.80 solved=False mean_steps=14 mean_tokens=2394 evicted=False
+  Candidate 2/32: mean_reward=-0.44 solved=False mean_steps=14 mean_tokens=912 evicted=False
+  Candidate 3/32: mean_reward=-0.37 solved=False mean_steps=14 mean_tokens=1159 evicted=False
+  Candidate 4/32: mean_reward=-0.16 solved=False mean_steps=12 mean_tokens=1253 evicted=False
+
+
+Hmm yes another day or two and ssaQW5 might genuinely improve Assistant's brains substantially.
+Pyrus — 26/05/2026, 14:38
+Friend
+Did you graduate nascol
+Necschuul
+ssa — 26/05/2026, 16:10
+No.
+Not yet at the very least.
+Pyrus — 26/05/2026, 16:13
+:jojoplead:
+Godspeed.
+Pyrus — 27/05/2026, 04:04
+Forwarded
+Painted a red nigger.
+Image
+Image
+Image
+Image
+Pyrus — 27/05/2026, 13:09
+You must comment.
+Forwarded but it was actually me.
+I painted this red cunt.
+He is TINY.
+Image
+ssa — 27/05/2026, 13:10
+This is solid proof that Astartes can be painted as intricately or as simply as you wannu
+Perfect army for entry-level skills
+Pyrus — 27/05/2026, 13:11
+I am pleased with the level of detail.
+ssa — 27/05/2026, 13:11
+that can scale up with your brushwork
+Pyrus — 27/05/2026, 13:11
+I had genuinely
+ssa — 27/05/2026, 13:11
+I am not
+Pyrus — 27/05/2026, 13:11
+No idea what I was doing
+ssa — 27/05/2026, 13:11
+Oh
+WHAT
+Damn.
+Ok...
+I was hedging my bets so I wouldn't be insulting your host TOO bad
+If this is you, yeah, it looks like shit. And of course it does.
+Pyrus — 27/05/2026, 13:11
+"A little bit of this a little bit of that..." is how it went basically.
+ssa — 27/05/2026, 13:11
+It's your first minifig pretty much
+Pyrus — 27/05/2026, 13:12
+S-sowwy...
+ssa — 27/05/2026, 13:12
+Really the biggest defects are the globbed little nodules
+Pyrus — 27/05/2026, 13:12
+Too many layers because incompetence
+ssa — 27/05/2026, 13:12
+Other than that one pass with a top coat would finish it
+Pyrus — 27/05/2026, 13:12
+Lack of foresight and planning.
+Pyrus — 27/05/2026, 13:13
+Hmm
+A sealing layer?
+Pyrus — 27/05/2026, 13:16
+Looks better in person.
+The camera is raped.
+ssa — 27/05/2026, 13:16
+Honestly those things are tiny it's FINE
+Pyrus — 27/05/2026, 13:16
+iPhone 16 pro doing the heavy lifting in making my zoomed photos look like fucking cancer.
+ssa — 27/05/2026, 13:16
+Yeah the photography is the worst part
+Pyrus — 27/05/2026, 13:16
+Also this.
+I am switching to another phone brand as soon as I get a paycheque...
+I am switching to...
+:jojoplead: 
+Snoy..
+ssa — 27/05/2026, 13:17
+Pyrus — 27/05/2026, 13:17
+:ihail:
+ssa — 27/05/2026, 13:17
+How's that coming along
+Have you found leads already?
+Pyrus — 27/05/2026, 13:17
+🍎:blamtri:
+Pyrus — 27/05/2026, 13:17
+:blamtri:
+JK I'm wrapping up all my werk permitting rn.
+Tomorrow I learn how to enter holes and perish from low O2
+ssa — 27/05/2026, 13:18
+Factorio.
+Pyrus — 27/05/2026, 13:19
+Exactly.
+Precisely.
+This place does literally have the Nauvis colorscheme.
+And the Biters.
+ssa — 27/05/2026, 13:21
+Pyrus — 28/05/2026, 22:32
+https://hitlerx.com/bronzeagemantis/status/2059826783285870981?s=20
+
+Bronze Age Pervert (@bronzeagemantis)
+The telling scene though for me is the longest, the town-hall assembly. The villagers state their grievances and they do this relatively well. The case they make is challenged in a deliberately incompetent way. The speaker is a French NGO worker who speaks only weak platitudes
+
+💬 3 🔁 10 ❤️ 277 👁️ 16.1K 
+
+HitlerX•28/05/2026, 03:39
+Bap thred u like
+Pyrus — Yesterday at 09:17
+Image
+Pyrus — Yesterday at 14:19
+Image
+ssa — Yesterday at 16:31
+Me.
+ssa — Yesterday at 16:31
+Holy fuck what happened in one week
+Image
+ssa — Yesterday at 23:02
+I have devised a physical algorithm to ensure everyone in a group has hugged everyone else exactly once with minimal coordination.
+We will be employing this in future Party/Court/PMC meetings.
+Pyrus — Yesterday at 23:05
+Genious.
+ssa — Yesterday at 23:05
+:roar:
+Pyrus — 02:23
+Image
+ssa — 14:35
+How peculiar.
+Much pageantry all around
+Pyrus — 15:04
+Good morning.
+ssa — 15:04
+gm
+Pyrus — 15:05
+I have done nothing but take courses.
+With the most stereotypically australian paramedical instructor type I have ever seen.
+LORD Tim Etheridge
+ssa — 15:05
+.
+I'm starting to suspect you just shapeshift into whatever's in your closest proximity
+Pyrus — 15:06
+Yes.
+ssa — 15:06
+Pyrus — 15:06
+That is genuinely it.
+But there are some parts of myself that are fixed.
+ssa — 15:06
+That is the magic of the genestealer
+Your features are so flexible that the slightest shift in the details entirely re-contextualizes the macro look
+Pyrus — 15:07
+Slight downside. Those chameleonic parts that are filled by the surroundings, if they are incompatible with some unknowable core aspects, leads me to VERY confindently asserting yeah I got this, genuinely doing well, then blowing up a gearbox.
+Pyrus — 15:07
+It's genuinely insane how it works lol.
+The only thing I haven't managed to transmogrify at will is the eye and hair colour.
+Anthony said I "look like a composite of every Romanian face he has ever seen"
+Maybe it's more of a composite of every dark white-ish face in general.
+Pyrus — 15:08
+This is an extremely good reading btw.
+ssa — 15:10
+Yes, I am aware.
+It turns out Death was simply in your head all along
+:jojoplead:
+Ultimate narrative cop-out
+Pyrus — 15:11
+That I'd die or whatever?
+ssa — 15:11
+...did you blow up a gearbox?
+Pyrus — 15:11
+Well not yet.
+But I am converting my license.
+It's kindof impressive how quickly I issued myself every Australian document I could possibly need.
+I have two bank accounts, a phone number, a tax number, a business number (sole trader), an Australian driver's license with Photo ID, and every certificate required to get on any industrial site AND even perform CPR there.
+In about
+12 days.
+:rdshrug:
+ssa — 15:12
+The Broadside research sheet is paying off in droves...
+Pyrus — 15:13
+To anyone else it must look like I have schizophrenia if I show them https://rainbowcrash.lol/perth.html
+ssa — 15:13
+Rather incredible how things simply happen when you set your goal to anything that doesn't require 4 years in an army you medically cannot join
+Pyrus — 15:13
+HAD that been structurally possible...
+They would have had to put together some kind of tribunal if I failed.
+Let's just put it that way.
+Thankfully I wasn't given the opportunity to play that one. Too bad !
+I am seeing paths to incredible profit.
+The Australian bureaucracy is such a tangled mess.
+You can get fined, and issued a mandatory site shutdown, over the mildest thing.
+This is GOOD for Broadside.
+Because making the entire market labyrinthine and putting the bar in the stratosphere means that automation, AI, and digitally audited compliance will simply become a structural NECESSITY to operate at all.
+A company without Broadside is a company that just gets shut down.
+ssa — 15:15
+The Intelligence Console has a value add...
+Yes well I am very eager to contribute massively to any such undertaking
+Director Struan of Navi Systems has worn through my magnanimous patience.
+He is simply not fit to hold any degree of responsibility.
+Pyrus — 15:17
+Imagine a checklist of all compliance details, the template auto-generated by scraping the lawbooks and standards themselves, the fields populated by image recognition, spatial AI reasoning, and compliance inspections. Presented in this exact tabular format.
+The Struan issue, I saw through it to begin with, I'm afraid.
+ssa — 15:18
+Beyond the terrible contract he brought us and the undocumented liability time bomb that is his codebase, or the fact that he's woven in every proprietary framework that makes it economically unfeasible for me to even look at the logs
+He has gotten into ~10K of debt
+Pyrus — 15:18
+I am pretty sure I tried telling you or hinted very heavily, insofar as honour allowed, that it was imprudent.
+To give him any shares.
+ssa — 15:18
+Across credit cards, car finance (with no stable income), etc etc.
+You have done so with infinite power to overturn any fiscal issues, he has done it with 0 jurisprudence.
+He's also probably personally liable to creditors if Navi ever goes bankrupt but 🤷‍♀️
+I did warn him about getting board meeting approvals to withdraw from the company account
+Pyrus — 15:19
+Did he go and buy a BMW or something?
+ssa — 15:20
+Volkwagen EV
+Pyrus — 15:20
+....?
+ssa — 15:20
+I question the sanity of his parents.
+They signed off on the debt.
+Oh well.
+Pyrus — 15:20
+Oh well!
+ssa — 15:20
+I'll see about stripping him of shares and authority eventually.
+Pyrus — 15:20
+I have written off far more deeply entrenched relationships myself.
+It happens.
+ssa — 15:21
+And turning him into an obligate subordinate.
+Pyrus — 15:21
+I hope you aren't too upset.
+ssa — 15:21
+No I mean they signed on as guarantors
+They enabled + made themselves personally liable
+For their 18 y/o son buying an EV.
+ssa — 15:22
+Just slightly miffed, which is as upset as I can get under normal circumstances.
+He truly cannot comprehend the depths of my Mercy.
